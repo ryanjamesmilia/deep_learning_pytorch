@@ -19,13 +19,13 @@ and downloading.
 ############################################################################################################################
 
 Instructions:
-	1.Ensure you have the required Python packages: matplotlib numpy seaborn scikit-learn
+	1. Ensure you have the required Python packages: matplotlib numpy seaborn scikit-learn
 		(if required) Install them using: pip install matplotlib numpy seaborn scikit-learn
-	2.Open the Jupyter Notebook.
-	3.Update the file paths to preferred location.
+	2. Open the Jupyter Notebook.
+	3. Update the file paths to preferred location.
 	
 ############################################################################################################################
 
 Data:
-	1.project_2.ipynb: Jupyter notebook outlining the process of Applied Deep Learning in Python using PyTorch.
+	1. project_2.ipynb: Jupyter notebook outlining the process of Applied Deep Learning in Python using PyTorch.
 ----------------------------------------------------------------------------------------------------------------------------
