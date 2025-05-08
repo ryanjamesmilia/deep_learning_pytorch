@@ -203,57 +203,6 @@
 
     <h2>Code Snippet 4</h2>
     <pre><code class="language-python">
-      """CNN Training Function"""
-
-      """ Description:
-          This module defines a function to train a Convolutional Neural Network (CNN) for one epoch on the MNIST dataset.
-          - Processes batches from the training data loader
-          - Computes loss and accuracy for each batch
-          - Updates model parameters using the optimizer
-          - Prints average loss and accuracy every 20 batches
-          - Tracks and reports total batches processed
-      """
-
-      def train_one_epoch():
-          print("Starting training epoch...")
-          net.train(True)
-          
-          running_loss = 0.0
-          running_accuracy = 0.0
-          batch_count = 0
-          
-          for batch_index, data in enumerate(trainloader):
-              batch_count += 1
-              
-              inputs, labels = data[0].to(device), data[1].to(device)
-              
-              optimizer.zero_grad()
-              
-              outputs = net(inputs)
-              correct = torch.sum(labels == torch.argmax(outputs, dim=1)).item()
-              running_accuracy += correct / batch_size
-              
-              loss = criterion(outputs, labels)
-              running_loss += loss.item()
-              loss.backward()
-              optimizer.step()
-              
-              if batch_index % 20 == 19: 
-                  avg_loss_across_batches = running_loss / 20
-                  avg_acc_across_batches = (running_accuracy / 20) * 100
-                  print('Batch {0}, Loss: {1:.3f}, Accuracy: {2:.1f}%'.format(
-                      batch_index + 1, avg_loss_across_batches, avg_acc_across_batches))
-                  running_loss = 0.0
-                  running_accuracy = 0.0
-          
-          print(f"Total batches processed: {batch_count}")
-          print("Finished training epoch.")
-
-      train_one_epoch()
-    </code></pre>
-
-    <h2>Code Snippet 5</h2>
-    <pre><code class="language-python">
       """CNN Training and Evaluation"""
 
       """ Description:
